@@ -1,3 +1,3 @@
-# bug bOuntY
+# hunter
 Wlaaaaaaad baya
 
