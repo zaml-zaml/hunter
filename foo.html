@@ -5,7 +5,7 @@ req.onload = reqListener;
 req.open('get','https://www.kijijiautos.ca/consumer/chat/conversations',true); 
 req.withCredentials = true; 
 req.setRequestHeader("x-client", "ca.move.web.app")
-req.send(); 
+req.send('{}'); 
 
 function reqListener() { alert(this.responseText); };
 </script>
