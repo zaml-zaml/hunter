@@ -8,18 +8,8 @@
 </head>
 <body>
 
-<form id="httpForm" action="https://spocs.getpocket.com/spocs" method="post" target="_blank">
-
-    <!-- JSON data -->
-    <input type="hidden" name="data" id="jsonData">
-
-    <!-- Submit button -->
-    <input type="submit" value="Submit Request">
-</form>
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Construct the JSON payload
         const jsonData = {
             pocket_id: "{18bead7c-8690-4cc2-8e4c-c641a8db71ba}",
             version: 2,
@@ -31,14 +21,21 @@
             }]
         };
 
-        // Set the JSON data to the hidden input field
-        document.getElementById("jsonData").value = JSON.stringify(jsonData);
-
-        // Set the correct content type
-        document.getElementById("httpForm").enctype = "application/json";
-
-        // Auto-submit the form on page load
-        document.getElementById("httpForm").submit();
+        fetch('https://spocs.getpocket.com/spocs', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': '*/*',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Te': 'trailers',
+                // You may need to include other headers like 'User-Agent', etc.
+            },
+            body: JSON.stringify(jsonData),
+        })
+        .then(response => response.json())
+        .then(data => console.log('Success:', data))
+        .catch(error => console.error('Error:', error));
     });
 </script>
 
