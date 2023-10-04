@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Request Form</title>
+</head>
+<body>
+
+<form id="httpForm" action="https://spocs.getpocket.com/spocs" method="post" target="_blank">
+    <!-- Hidden input fields for headers -->
+    <input type="hidden" name="Host" value="spocs.getpocket.com">
+    <input type="hidden" name="User-Agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0">
+    <input type="hidden" name="Accept" value="*/*">
+    <input type="hidden" name="Accept-Language" value="en-US,en;q=0.5">
+    <input type="hidden" name="Accept-Encoding" value="gzip, deflate, br">
+    <input type="hidden" name="Content-Type" value="application/json">
+    <input type="hidden" name="Te" value="trailers">
+
+    <!-- JSON data -->
+    <input type="hidden" name="pocket_id" value="{18bead7c-8690-4cc2-8e4c-c641a8db71ba}">
+    <input type="hidden" name="version" value="2">
+    <input type="hidden" name="consumer_key" value="40249-e88c401e1b1f2242d9e441c4">
+    <input type="hidden" name="placements" value='[{"name":"sponsored-topsites","ad_types":[3120],"zone_ids":[280143]}]'>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit Request">
+</form>
+
+<script>
+    // Auto-submit the form on page load
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("httpForm").submit();
+    });
+</script>
+
+</body>
+</html>
